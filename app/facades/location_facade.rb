@@ -8,7 +8,7 @@ class LocationFacade
   def coordinates
     @coordinates ||= begin
       coordinates_json = @service.get_coordinates(@location)
-      require 'pry' ; binding.pry
+      @coordinates = coordinates_json[:results].first[:locations].first[:latLng]
     end
   end
 end

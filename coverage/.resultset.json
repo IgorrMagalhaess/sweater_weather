@@ -6,7 +6,7 @@
           1,
           1,
           1,
-          0,
+          1,
           null,
           null
         ]
@@ -21,21 +21,42 @@
         "lines": [
           1,
           1,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
           null,
           null,
           1,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
           null,
+          null,
+          null
+        ]
+      },
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/services/location_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1713639215
+    "timestamp": 1713640510
   }
 }
