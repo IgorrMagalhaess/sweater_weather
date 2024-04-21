@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-04-21T16:33:40-04:00">2024-04-21T16:33:40-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-04-21T17:20:25-04:00">2024-04-21T17:20:25-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  98.21%
+  100.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.46
+         1.47
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>7</b> files in total.
+    <b>8</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>56</b> relevant lines,
-    <span class="green"><b>55</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed. </span>
+    <b>60</b> relevant lines,
+    <span class="green"><b>60</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
-  98.21%
+  100.0%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#6cc45006347b2cdcc1f62116a03bc0c2cd8d886f" class="src_link" title="app/controllers/api/v1/forecast_controller.rb">app/controllers/api/v1/forecast_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">80.00 %</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">7</td>
             <td class="cell--number">5</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">0.80</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -95,9 +95,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#3c3dc4501559f95a4530c37da4f40a34e7823e2c" class="src_link" title="app/facades/forecast_facade.rb">app/facades/forecast_facade.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">10</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">9</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -118,10 +118,21 @@
             <td class="strong t-file__name"><a href="#e9650bd43b2c54a6d937e17d739f25ff19a00b05" class="src_link" title="app/poros/forecast.rb">app/poros/forecast.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">49</td>
-            <td class="cell--number">13</td>
-            <td class="cell--number">13</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">14</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">3.08</td>
+            <td class="cell--number">2.93</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#3f1b3a0145f97f292850cdceda72ddc41c923d29" class="src_link" title="app/serializers/forecast_serializer.rb">app/serializers/forecast_serializer.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.25</td>
             
           </tr>
         
@@ -168,8 +179,8 @@
   <div class="header">
     <h3>app/controllers/api/v1/forecast_controller.rb</h3>
     <h4>
-      <span class="red">
-  80.0%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -179,8 +190,8 @@
 
     <div class="t-line-summary">
       <b>5</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -219,7 +230,7 @@
 
             
 
-            <code class="ruby">    @coordinates = LocationFacade.new(params[:location]).coordinates.values.join(&#39;,&#39;)</code>
+            <code class="ruby">    coordinates = LocationFacade.new(params[:location]).coordinates.values.join(&#39;,&#39;)</code>
           </li>
         </div>
       
@@ -230,18 +241,18 @@
 
             
 
-            <code class="ruby">    @forecast = ForecastFacade.new(@coordinates).forecast</code>
+            <code class="ruby">    forecast = ForecastFacade.new(coordinates).forecast</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="5">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    require &#39;pry&#39; ; binding.pry</code>
+            
+
+            <code class="ruby">    render json: ForecastSerializer.new(forecast)</code>
           </li>
         </div>
       
@@ -339,8 +350,8 @@
     
 
     <div class="t-line-summary">
-      <b>10</b> relevant lines.
-      <span class="green"><b>10</b> lines covered</span> and
+      <b>9</b> relevant lines.
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -468,34 +479,12 @@
 
             
 
-            <code class="ruby">      forecast = Forecast.new(forecast_json)</code>
+            <code class="ruby">      @forecast = Forecast.new(forecast_json)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">      require &#39;pry&#39; ; binding.pry</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby">      # @forecast = forecast_json.map { |forecast_data| Forecast.new(forecast_data)}</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="12">
             
             
 
@@ -506,7 +495,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="15">
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -517,7 +506,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
@@ -731,8 +720,8 @@
     
 
     <div class="t-line-summary">
-      <b>13</b> relevant lines.
-      <span class="green"><b>13</b> lines covered</span> and
+      <b>14</b> relevant lines.
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -766,8 +755,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="3">
+            
             
 
             
@@ -777,8 +766,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="4">
+            
             
 
             
@@ -788,8 +777,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="5">
+            
             
 
             
@@ -799,8 +788,8 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
             
 
             
@@ -810,13 +799,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    @current_weather = current_weather(forecast_data)</code>
+            
+
+            <code class="ruby">    @current_weather = current_weather_data(forecast_data[:current])</code>
           </li>
         </div>
       
@@ -827,24 +816,24 @@
 
             
 
-            <code class="ruby">    @daily_weather = daily_weather(forecast_data)</code>
+            <code class="ruby">    @daily_weather = daily_weather_data(forecast_data[:forecast][:forecastday])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">    @hourly_weather = hourly_weather(forecast_data)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
+          <li class="covered" data-hits="1" data-linenumber="9">
             <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    @hourly_weather = hourly_weather_data(forecast_data[:forecast][:forecastday].first[:hour])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
             
 
             
@@ -865,13 +854,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  def current_weather(weather_data)</code>
+            
+
+            <code class="ruby">  def current_weather_data(weather_data)</code>
           </li>
         </div>
       
@@ -882,18 +871,18 @@
 
             
 
-            <code class="ruby">      {</code>
+            <code class="ruby">    {</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">        last_updated: weather_data[:current][:last_updated],</code>
+            
+
+            <code class="ruby">      last_updated: weather_data[:last_updated],</code>
           </li>
         </div>
       
@@ -904,7 +893,7 @@
 
             
 
-            <code class="ruby">        temperature: weather_data[:current][:temp_f],</code>
+            <code class="ruby">      temperature: weather_data[:temp_f],</code>
           </li>
         </div>
       
@@ -915,7 +904,7 @@
 
             
 
-            <code class="ruby">        feels_like: weather_data[:current][:feelslike_f],</code>
+            <code class="ruby">      feels_like: weather_data[:feelslike_f],</code>
           </li>
         </div>
       
@@ -926,7 +915,7 @@
 
             
 
-            <code class="ruby">        humidity: weather_data[:current][:humidity],</code>
+            <code class="ruby">      humidity: weather_data[:humidity],</code>
           </li>
         </div>
       
@@ -937,7 +926,7 @@
 
             
 
-            <code class="ruby">        uvi: weather_data[:current][:uv],</code>
+            <code class="ruby">      uvi: weather_data[:uv],</code>
           </li>
         </div>
       
@@ -948,7 +937,7 @@
 
             
 
-            <code class="ruby">        visibility: weather_data[:current][:vis_miles],</code>
+            <code class="ruby">      visibility: weather_data[:vis_miles],</code>
           </li>
         </div>
       
@@ -959,29 +948,29 @@
 
             
 
-            <code class="ruby">        condition: weather_data[:current][:condition][:text],</code>
+            <code class="ruby">      condition: weather_data[:condition][:text],</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="21">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="21">
+            
             
 
             
 
-            <code class="ruby">        icon: weather_data[:current][:condition][:icon]</code>
+            <code class="ruby">      icon: weather_data[:condition][:icon]</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="22">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="22">
+            
             
 
             
 
-            <code class="ruby">      }</code>
+            <code class="ruby">    }</code>
           </li>
         </div>
       
@@ -997,8 +986,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="5" data-linenumber="24">
-            <span class="hits">5</span>
+          <li class="never" data-hits="" data-linenumber="24">
+            
             
 
             
@@ -1008,24 +997,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  def daily_weather(weather_data)</code>
+            
+
+            <code class="ruby">  def daily_weather_data(weather_data)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    weather_data[:forecast][:forecastday].map do |day|</code>
+            
+
+            <code class="ruby">    weather_data.map do |day|</code>
           </li>
         </div>
       
@@ -1041,8 +1030,8 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="28">
-            
+          <li class="covered" data-hits="5" data-linenumber="28">
+            <span class="hits">5</span>
             
 
             
@@ -1118,8 +1107,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="35">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="35">
+            
             
 
             
@@ -1129,8 +1118,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="36">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="36">
+            
             
 
             
@@ -1151,8 +1140,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="24" data-linenumber="38">
-            <span class="hits">24</span>
+          <li class="never" data-hits="" data-linenumber="38">
+            
             
 
             
@@ -1162,24 +1151,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="39">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="39">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  def hourly_weather(weather_data)</code>
+            
+
+            <code class="ruby">  def hourly_weather_data(weather_data)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="40">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="40">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    weather_data[:forecast][:forecastday].first[:hour].map do |day|</code>
+            
+
+            <code class="ruby">    weather_data.map do |day|</code>
           </li>
         </div>
       
@@ -1195,8 +1184,8 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
-            
+          <li class="covered" data-hits="24" data-linenumber="42">
+            <span class="hits">24</span>
             
 
             
@@ -1273,6 +1262,103 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="49">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="3f1b3a0145f97f292850cdceda72ddc41c923d29">
+  <div class="header">
+    <h3>app/serializers/forecast_serializer.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class ForecastSerializer</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  include JSONAPI::Serializer</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  attributes :current_weather, :daily_weather, :hourly_weather</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="4">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="5">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">  set_id { nil }</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
