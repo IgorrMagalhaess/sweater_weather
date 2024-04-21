@@ -12,7 +12,7 @@
           null,
           1,
           1,
-          2,
+          3,
           null,
           null
         ]
@@ -156,10 +156,36 @@
           null,
           1,
           1,
-          1,
+          2,
           null,
           null,
           1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
           1,
           null,
           1,
@@ -346,8 +372,33 @@
           2,
           null
         ]
+      },
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/controllers/api/v1/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/serializers/users_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1713741860
+    "timestamp": 1713742317
   }
 }

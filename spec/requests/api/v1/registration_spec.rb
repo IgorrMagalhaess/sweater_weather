@@ -25,7 +25,33 @@ RSpec.describe "User Registration", type: :request do
 
       expect(registration_response[:data]).to have_key(:type)
       expect(registration_response[:data][:type]).to eq("users")
-      expect(registration_response[:data][:id]).to be_a(Integer)
+      expect(registration_response[:data][:id]).to be_a(String)
+
+      expect(registration_response[:data][:attributes]).to have_key(:email)
+      expect(registration_response[:data][:attributes]).to have_key(:api_key)
+      expect(registration_response[:data][:attributes]).to_not have_key(:password)
+    end
+
+    it 'raises 400 error if passwords dont match' do
+      user_params = {
+        email: 'test@example.com',
+        password: 'test',
+        password_confirmation: 'wrong'
+      }
+
+      post "/api/v1/users", headers: @headers, params: JSON.generate(user: user_params)
+
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+
+      registration_response = JSON.parse(response.body, symbolize_names: true)
+
+      expect(registration_response).to have_key(:data)
+      expect(registration_response[:data]).to be_a(Hash)
+
+      expect(registration_response[:data]).to have_key(:type)
+      expect(registration_response[:data][:type]).to eq("users")
+      expect(registration_response[:data][:id]).to be_a(String)
 
       expect(registration_response[:data][:attributes]).to have_key(:email)
       expect(registration_response[:data][:attributes]).to have_key(:api_key)
