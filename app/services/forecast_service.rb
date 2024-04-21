@@ -15,5 +15,3 @@ class ForecastService
     get_url("http://api.weatherapi.com/v1/forecast.json?key=#{Rails.application.credentials.weatherapi_key}&q=#{coordinates}&days=5")
   end
 end
-
-# v1/forecast.json?key=c727931a85774488a1900656242004&q=33.74831,-84.39111&aqi=no

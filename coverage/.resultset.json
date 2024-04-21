@@ -18,6 +18,55 @@
           null
         ]
       },
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/poros/forecast.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          24,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/facades/location_facade.rb": {
         "lines": [
           1,
@@ -69,7 +118,9 @@
           1,
           1,
           1,
-          2,
+          1,
+          1,
+          null,
           null,
           null,
           null
@@ -93,12 +144,10 @@
           1,
           1,
           null,
-          null,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1713727876
+    "timestamp": 1713731620
   }
 }

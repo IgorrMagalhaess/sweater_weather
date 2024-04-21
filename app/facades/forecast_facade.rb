@@ -8,7 +8,7 @@ class ForecastFacade
   def forecast
     @forecast ||= begin
       forecast_json = @service.get_forecast(@coordinates)
-      @forecast = forecast_json.map { |forecast_data| Forecast.new(forecast_data)}
+      @forecast = Forecast.new(forecast_json)
     end
   end
 end
