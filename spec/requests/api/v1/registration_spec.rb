@@ -46,16 +46,11 @@ RSpec.describe "User Registration", type: :request do
 
       registration_response = JSON.parse(response.body, symbolize_names: true)
 
-      expect(registration_response).to have_key(:data)
-      expect(registration_response[:data]).to be_a(Hash)
+      expect(registration_response).to have_key(:errors)
+      expect(registration_response[:errors]).to be_an(Array)
 
-      expect(registration_response[:data]).to have_key(:type)
-      expect(registration_response[:data][:type]).to eq("users")
-      expect(registration_response[:data][:id]).to be_a(String)
-
-      expect(registration_response[:data][:attributes]).to have_key(:email)
-      expect(registration_response[:data][:attributes]).to have_key(:api_key)
-      expect(registration_response[:data][:attributes]).to_not have_key(:password)
+      expect(registration_response[:errors].first).to be_a(Hash)
+      expect(registration_response[:errors].first[:detail]).to eq("Validation failed: Password confirmation doesn't match Password, Password confirmation doesn't match Password")
     end
   end
 end
