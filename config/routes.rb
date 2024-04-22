@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       resources :users, only: [:create]
       resources :sessions, only: [:create]
       resources :air_quality, only: [:index]
+      get "book-search", to: "book_search#index"
     end
   end
 end

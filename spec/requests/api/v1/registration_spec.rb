@@ -2,6 +2,7 @@ require "rails_helper"
 
 RSpec.describe "User Registration", type: :request do
   before do
+    @headers = { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
   end
 
   describe "POST 'api/v1/users" do
@@ -13,7 +14,7 @@ RSpec.describe "User Registration", type: :request do
       }
 
       post "/api/v1/users", headers: @headers, params: JSON.generate(user: user_params)
-
+      
       expect(response).to be_successful
       expect(response.status).to eq(201)
 
