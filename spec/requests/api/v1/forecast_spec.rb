@@ -12,6 +12,7 @@ RSpec.describe "Forecast Api", type: :request do
       forecast_response = JSON.parse(response.body, symbolize_names: true)
 
       expect(response).to be_successful
+      expect(response.status).to eq(200)
 
       expect(forecast_response[:data]).to be_a(Hash)
       expect(forecast_response[:data][:id]).to eq(nil)
