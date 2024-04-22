@@ -48,16 +48,16 @@ RSpec.describe "Sessions Endpoint", type: :request do
       expect(session_response[:errors].first[:detail]).to eq("Validation Failed: Wrong email or password.")
     end
 
-    it 'should raise error if no user exists' do
+    it 'should raise error if email is wrong' do
       user_params = {
         email: 'test@example.com',
-        password: 'password123'
+        password: 'password'
       }
 
       post '/api/v1/sessions', headers: @headers, params: JSON.generate(user: user_params)
 
       expect(response).to_not be_successful
-      expect(response.status).to eq(404)
+      expect(response.status).to eq(400)
 
       session_response = JSON.parse(response.body, symbolize_names: true)
 
@@ -65,7 +65,7 @@ RSpec.describe "Sessions Endpoint", type: :request do
       expect(session_response[:errors]).to be_an(Array)
 
       expect(session_response[:errors].first).to be_a(Hash)
-      expect(session_response[:errors].first[:detail]).to eq("User not found")
+      expect(session_response[:errors].first[:detail]).to eq("Validation Failed: Wrong email or password.")
     end
   end
 end
