@@ -2,7 +2,6 @@ require "rails_helper"
 
 RSpec.describe "User Registration", type: :request do
   before do
-    @headers = { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
   end
 
   describe "POST 'api/v1/users" do
