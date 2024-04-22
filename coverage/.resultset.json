@@ -50,15 +50,15 @@
         "lines": [
           1,
           1,
-          3,
-          3,
-          3,
+          2,
+          2,
+          2,
           null,
           null,
           1,
-          2,
-          2,
-          2,
+          1,
+          1,
+          1,
           null,
           null,
           null
@@ -604,6 +604,19 @@
           null
         ]
       },
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/spec/services/air_quality_service_spec.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/spec/services/forecast_service_spec.rb": {
         "lines": [
           1,
@@ -675,55 +688,36 @@
         "lines": [
           1,
           1,
-          2,
-          2,
+          1,
+          1,
           null,
           null,
           null,
           1,
-          2,
+          1,
           null,
-          2,
+          1,
           null,
           null,
           1,
-          2,
+          1,
           null,
           null
         ]
       },
       "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/controllers/api/v1/air_quality_controller.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          null,
-          1,
           null,
           null,
           null,
           null,
           null,
-          1,
-          0,
           null,
           null,
           null
         ]
       }
     },
-    "timestamp": 1713799644
+    "timestamp": 1713800943
   }
 }
