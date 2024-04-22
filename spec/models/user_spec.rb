@@ -10,8 +10,12 @@ RSpec.describe User, type: :model do
 
   describe "before_create" do
     it 'generates an API key' do
-      user = User.create(email: 'test@example.com', password: 'password', password_confirmation: 'password')
+      user = User.new(email: 'test@example.com', password: 'password', password_confirmation: 'password')
 
+      expect(user.api_key).to eq(nil)
+
+      user.save!
+      
       expect(user.api_key).to_not be_nil
     end
   end
