@@ -28,8 +28,8 @@ RSpec.describe "Books Search Request" do
       expect(json[:data][:attributes][:destination]).to eq("Atlanta,GA")
 
       expect(json[:data][:attributes]).to have_key(:forecast)
-      expect(json[:data][:attributes][:destination]).to have_key(:summary)
-      expect(json[:data][:attributes][:destination]).to have_key(:temperature)
+      expect(json[:data][:attributes][:forecast]).to have_key(:summary)
+      expect(json[:data][:attributes][:forecast]).to have_key(:temperature)
       
       expect(json[:data][:attributes]).to have_key(:total_books_found)
       expect(json[:data][:attributes][:total_books_found]).to eq(3118)

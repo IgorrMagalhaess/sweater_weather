@@ -30,10 +30,12 @@ RSpec.describe Forecast do
   end
 
   describe '#initialize' do
-    it 'correctly initializes current_weather, daily_weather, and hourly_weather' do
+    it 'correctly initializes current_weather, daily_weather, hourly_weather, and resumed_forecast' do
       expect(@forecast.current_weather[:last_updated]).to eq('2024-04-21 15:00')
       expect(@forecast.daily_weather.first[:date]).to eq('2024-04-21')
       expect(@forecast.hourly_weather.first[:time]).to eq('12:00')
+      expect(@forecast.resumed_forecast[:summary]).to eq('Sunny')
+      expect(@forecast.resumed_forecast[:temperature]).to eq(75)
     end
   end
 
@@ -42,7 +44,13 @@ RSpec.describe Forecast do
       current_weather = @forecast.current_weather
 
       expect(current_weather[:last_updated]).to eq('2024-04-21 15:00')
+      expect(current_weather[:temperature]).to eq(75)
+      expect(current_weather[:feels_like]).to eq(78)
+      expect(current_weather[:humidity]).to eq(60)
+      expect(current_weather[:uvi]).to eq(3)
+      expect(current_weather[:visibility]).to eq(10)
       expect(current_weather[:condition]).to eq('Sunny')
+      expect(current_weather[:icon]).to eq('01d')
     end
   end
 
@@ -51,7 +59,12 @@ RSpec.describe Forecast do
       daily_weather = @forecast.daily_weather
 
       expect(daily_weather.first[:date]).to eq('2024-04-21')
+      expect(daily_weather.first[:sunrise]).to eq('06:00')
+      expect(daily_weather.first[:sunset]).to eq('18:00')
+      expect(daily_weather.first[:max_temp]).to eq(80)
+      expect(daily_weather.first[:min_temp]).to eq(70)
       expect(daily_weather.first[:condition]).to eq('Partly cloudy')
+      expect(daily_weather.first[:icon]).to eq('02d')
     end
   end
 
@@ -60,7 +73,9 @@ RSpec.describe Forecast do
       hourly_weather = @forecast.hourly_weather
 
       expect(hourly_weather.first[:time]).to eq('12:00')
+      expect(hourly_weather.first[:temperature]).to eq(77)
       expect(hourly_weather.first[:condition]).to eq('Cloudy')
+      expect(hourly_weather.first[:icon]).to eq('04d')
     end
   end
 end
