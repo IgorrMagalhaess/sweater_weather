@@ -7,7 +7,7 @@ RSpec.describe "Air Quality Endpoint" do
   end
 
   describe "GET /api/v1/air_quality?country={country}" do
-    it 'returns the air quality in the capital of the country the the user provided' do
+    it 'returns the air quality in the capital of the country the the user provided', :vcr do
       get "/api/v1/air_quality?country=India"
 
       expect(response).to be_successful

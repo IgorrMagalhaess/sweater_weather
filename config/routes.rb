@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :forecast, only: [:index]
       resources :users, only: [:create]
       resources :sessions, only: [:create]
+      resources :air_quality, only: [:index]
     end
   end
 end
