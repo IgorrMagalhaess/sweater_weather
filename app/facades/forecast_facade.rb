@@ -18,25 +18,24 @@ class ForecastFacade
   def forecast_end_route
     @forecast_end_route ||= begin
       forecast_end_route_json = @service.get_forecast(@coordinates)
-      time_end_route = calculate_time_at_arrival
-      forecast_end_route_json[:forecast][:forecastday].each do |day|
-        if day[:date] == time_end_route[:date]
-          day[:hour].each do |hour|
-            if hour[:time] == time_end_route[:time]
-              @forecast_end_route = {
-                datetime: hour[:time],
-                temperature: hour[:temp_f],
-                condition: hour[:condition][:text]
-              }
-            else
-              next
-            end
-          end
-        else
-          next
+      if @travel_time == "impossible"
+        @forecast_end_route = {}
+      else
+        time_end_route = calculate_time_at_arrival
+        forecast_hour = forecast_end_route_json[:forecast][:forecastday].find do |day|
+          day[:date] == time_end_route[:date]
+        end&.dig(:hour)&.find { |hour| hour[:time] == time_end_route[:time] }
+
+        if forecast_hour
+          @forecast_end_route = {
+            datetime: forecast_hour[:time],
+            temperature: forecast_hour[:temp_f],
+            condition: forecast_hour[:condition][:text]
+          }
         end
+    
+        @forecast_end_route
       end
-      @forecast_end_route
     end
   end
 

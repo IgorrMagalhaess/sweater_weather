@@ -16,6 +16,6 @@ class LocationService
   end
 
   def get_route_info(start_city, end_city)
-    get_url("https://www.mapquestapi.com/directions/v2/route?key=#{Rails.application.credentials.mapquestapi_key}&from=Cincinatti, OH&to=Chicago, IL")
+    get_url("https://www.mapquestapi.com/directions/v2/route?key=#{Rails.application.credentials.mapquestapi_key}&from=#{start_city}&to=#{end_city}")
   end
 end

@@ -9,11 +9,19 @@ class RoutesFacade
   def route_info
     @route_info ||= begin
       route_json = @service.get_route_info(@start_city, @end_city)
-      @route_info = {
-        start_city: @start_city,
-        end_city: @end_city,
-        travel_time: route_json[:route][:formattedTime]
-      }
+      if route_json[:route][:formattedTime]  
+        @route_info = {
+          start_city: @start_city,
+          end_city: @end_city,
+          travel_time: route_json[:route][:formattedTime]
+        }
+      else
+        @route_info = {
+          start_city: @start_city,
+          end_city: @end_city,
+          travel_time: "impossible"
+        }
+      end
     end
   end
 end
