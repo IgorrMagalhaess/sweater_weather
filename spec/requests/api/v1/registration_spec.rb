@@ -13,7 +13,7 @@ RSpec.describe "User Registration", type: :request do
         password_confirmation: 'test'
       }
 
-      post "/api/v0/users", headers: @headers, params: JSON.generate(user: user_params)
+      post "/api/v0/users", headers: @headers, params: JSON.generate(user_params)
 
       expect(response).to be_successful
       expect(response.status).to eq(201)
@@ -39,7 +39,7 @@ RSpec.describe "User Registration", type: :request do
         password_confirmation: 'wrong'
       }
 
-      post "/api/v0/users", headers: @headers, params: JSON.generate(user: user_params)
+      post "/api/v0/users", headers: @headers, params: JSON.generate(user_params)
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
@@ -50,7 +50,7 @@ RSpec.describe "User Registration", type: :request do
       expect(registration_response[:errors]).to be_an(Array)
 
       expect(registration_response[:errors].first).to be_a(Hash)
-      expect(registration_response[:errors].first[:detail]).to eq("Validation failed: Password confirmation doesn't match Password, Password confirmation doesn't match Password")
+      expect(registration_response[:errors].first[:detail]).to eq("Validation failed: Password confirmation doesn't match Password")
     end
 
     it 'raises 400 error if email is already taken' do
@@ -62,7 +62,7 @@ RSpec.describe "User Registration", type: :request do
         password_confirmation: 'test'
       }
 
-      post "/api/v0/users", headers: @headers, params: JSON.generate(user: user_params)
+      post "/api/v0/users", headers: @headers, params: JSON.generate(user_params)
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
@@ -84,7 +84,7 @@ RSpec.describe "User Registration", type: :request do
         password_confirmation: 'test'
       }
 
-      post "/api/v0/users", headers: @headers, params: JSON.generate(user: user_params)
+      post "/api/v0/users", headers: @headers, params: JSON.generate(user_params)
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
