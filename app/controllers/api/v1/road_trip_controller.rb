@@ -5,7 +5,8 @@ before_action :find_user, only: [:create]
     start_city = params[:road_trip][:origin].gsub(/\s+/, "")
     end_city = params[:road_trip][:destination].gsub(/\s+/, "")
     route_info = RoutesFacade.new(start_city, end_city).route_info
-    require 'pry' ; binding.pry
+    forecast = ForecastFacade.new(end_city, route_info[:travel_time]).forecast_end_route
+    render json: RoadTripSerializer(route_info, forecast).serialize
   end
 
   private
