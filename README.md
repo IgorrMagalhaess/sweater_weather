@@ -57,6 +57,7 @@ Content-Type: application/json
 Accept: application/json
 ```
 - Requirements: Valid Location.
+
 **Response:**
 ```json
 {
