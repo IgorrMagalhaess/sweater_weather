@@ -1,4 +1,4 @@
-class Api::V1::SessionsController < ApplicationController
+class Api::V0::SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:user][:email])
     if user && user.authenticate(params[:user][:password])

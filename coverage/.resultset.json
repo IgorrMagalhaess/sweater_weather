@@ -902,7 +902,7 @@
           null
         ]
       },
-      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/controllers/api/v1/forecast_controller.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/controllers/api/v0/forecast_controller.rb": {
         "lines": [
           1,
           1,
@@ -936,7 +936,7 @@
           null
         ]
       },
-      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/controllers/api/v1/users_controller.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/controllers/api/v0/users_controller.rb": {
         "lines": [
           1,
           1,
@@ -978,7 +978,7 @@
           null
         ]
       },
-      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/controllers/api/v1/road_trip_controller.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/controllers/api/v0/road_trip_controller.rb": {
         "lines": [
           1,
           1,
@@ -1075,7 +1075,7 @@
           null
         ]
       },
-      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/controllers/api/v1/sessions_controller.rb": {
+      "/Users/igormagalhaes/Desktop/turing/3mod/projects/sweater_weather/app/controllers/api/v0/sessions_controller.rb": {
         "lines": [
           1,
           1,
@@ -1092,6 +1092,6 @@
         ]
       }
     },
-    "timestamp": 1713892270
+    "timestamp": 1713892537
   }
 }

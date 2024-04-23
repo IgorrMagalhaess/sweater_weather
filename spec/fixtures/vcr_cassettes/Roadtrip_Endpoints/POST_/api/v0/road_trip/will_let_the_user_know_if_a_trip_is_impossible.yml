@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 23 Apr 2024 17:11:09 GMT
+      - Tue, 23 Apr 2024 17:15:36 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,7 +29,7 @@ http_interactions:
       X-Powered-By:
       - MapQuest
       X-Request-Id:
-      - 7ac51a60-0194-11ef-96df-47cc51486371
+      - 19ba7660-0195-11ef-96df-47cc51486371
       Access-Control-Allow-Origin:
       - "*"
       X-Transaction-Count:
@@ -40,7 +40,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJyb3V0ZSI6eyJyb3V0ZUVycm9yIjp7ImVycm9yQ29kZSI6MiwibWVzc2FnZSI6IiJ9fSwiaW5mbyI6eyJzdGF0dXNjb2RlIjo0MDIsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyNCBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDI0IE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbIldlIGFyZSB1bmFibGUgdG8gcm91dGUgd2l0aCB0aGUgZ2l2ZW4gbG9jYXRpb25zLiJdfX0=
-  recorded_at: Tue, 23 Apr 2024 17:11:09 GMT
+  recorded_at: Tue, 23 Apr 2024 17:15:36 GMT
 - request:
     method: get
     uri: http://api.weatherapi.com/v1/forecast.json?days=5&key=<Authorization>&q=London,UK
@@ -60,7 +60,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 23 Apr 2024 17:11:10 GMT
+      - Tue, 23 Apr 2024 17:15:36 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -70,7 +70,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Server:
-      - BunnyCDN-IL1-1070
+      - BunnyCDN-IL1-940
       Cdn-Pullzone:
       - '93447'
       Cdn-Uid:
@@ -84,9 +84,9 @@ http_interactions:
       Via:
       - 1.1 varnish (Varnish/6.0)
       X-Weatherapi-Qpm-Left:
-      - '4999943'
+      - '4999936'
       X-Varnish:
-      - '38970544'
+      - '49929227'
       Cdn-Proxyver:
       - '1.04'
       Cdn-Requestpullsuccess:
@@ -94,20 +94,20 @@ http_interactions:
       Cdn-Requestpullcode:
       - '200'
       Cdn-Cachedat:
-      - 04/23/2024 17:11:10
+      - 04/23/2024 17:15:36
       Cdn-Edgestorageid:
       - '1069'
       Cdn-Status:
       - '200'
       Cdn-Requestid:
-      - c5fedc39833581eacb466e08a3b51be6
+      - 8b28cc0356174a3162750a180dbb3a3d
       Cdn-Cache:
       - EXPIRED
     body:
       encoding: ASCII-8BIT
       string: '{"location":{"name":"London","region":"City of London, Greater London","country":"United
-        Kingdom","lat":51.52,"lon":-0.11,"tz_id":"Europe/London","localtime_epoch":1713892270,"localtime":"2024-04-23
-        18:11"},"current":{"last_updated_epoch":1713891600,"last_updated":"2024-04-23
+        Kingdom","lat":51.52,"lon":-0.11,"tz_id":"Europe/London","localtime_epoch":1713892414,"localtime":"2024-04-23
+        18:13"},"current":{"last_updated_epoch":1713891600,"last_updated":"2024-04-23
         18:00","temp_c":9.0,"temp_f":48.2,"is_day":1,"condition":{"text":"Partly cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png","code":1003},"wind_mph":11.9,"wind_kph":19.1,"wind_degree":20,"wind_dir":"NNE","pressure_mb":1021.0,"pressure_in":30.15,"precip_mm":0.0,"precip_in":0.0,"humidity":76,"cloud":50,"feelslike_c":6.6,"feelslike_f":43.8,"vis_km":10.0,"vis_miles":6.0,"uv":3.0,"gust_mph":13.2,"gust_kph":21.2},"forecast":{"forecastday":[{"date":"2024-04-23","date_epoch":1713830400,"day":{"maxtemp_c":10.5,"maxtemp_f":50.9,"mintemp_c":5.0,"mintemp_f":41.1,"avgtemp_c":7.0,"avgtemp_f":44.7,"maxwind_mph":11.4,"maxwind_kph":18.4,"totalprecip_mm":1.24,"totalprecip_in":0.05,"totalsnow_cm":0.0,"avgvis_km":9.3,"avgvis_miles":5.0,"avghumidity":80,"daily_will_it_rain":1,"daily_chance_of_rain":88,"daily_will_it_snow":0,"daily_chance_of_snow":0,"condition":{"text":"Patchy
         rain nearby","icon":"//cdn.weatherapi.com/weather/64x64/day/176.png","code":1063},"uv":2.0},"astro":{"sunrise":"05:47
         AM","sunset":"08:11 PM","moonrise":"07:59 PM","moonset":"05:30 AM","moon_phase":"Full
@@ -328,5 +328,5 @@ http_interactions:
         shower","icon":"//cdn.weatherapi.com/weather/64x64/night/353.png","code":1240},"wind_mph":10.3,"wind_kph":16.6,"wind_degree":153,"wind_dir":"SSE","pressure_mb":998.0,"pressure_in":29.47,"precip_mm":0.37,"precip_in":0.01,"snow_cm":0.0,"humidity":92,"cloud":80,"feelslike_c":6.1,"feelslike_f":42.9,"windchill_c":6.1,"windchill_f":42.9,"heatindex_c":8.7,"heatindex_f":47.6,"dewpoint_c":7.4,"dewpoint_f":45.3,"will_it_rain":1,"chance_of_rain":100,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":17.7,"gust_kph":28.5,"uv":1.0},{"time_epoch":1714255200,"time":"2024-04-27
         23:00","temp_c":8.1,"temp_f":46.6,"is_day":0,"condition":{"text":"Light rain
         shower","icon":"//cdn.weatherapi.com/weather/64x64/night/353.png","code":1240},"wind_mph":10.7,"wind_kph":17.3,"wind_degree":155,"wind_dir":"SSE","pressure_mb":998.0,"pressure_in":29.46,"precip_mm":0.18,"precip_in":0.01,"snow_cm":0.0,"humidity":91,"cloud":100,"feelslike_c":5.3,"feelslike_f":41.5,"windchill_c":5.3,"windchill_f":41.5,"heatindex_c":8.1,"heatindex_f":46.6,"dewpoint_c":6.8,"dewpoint_f":44.2,"will_it_rain":1,"chance_of_rain":100,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":17.5,"gust_kph":28.2,"uv":1.0}]}]}}'
-  recorded_at: Tue, 23 Apr 2024 17:11:10 GMT
+  recorded_at: Tue, 23 Apr 2024 17:15:37 GMT
 recorded_with: VCR 6.2.0

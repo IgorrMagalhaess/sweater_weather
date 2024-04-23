@@ -5,7 +5,7 @@ RSpec.describe "User Registration", type: :request do
     @headers = { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
   end
 
-  describe "POST 'api/v1/users" do
+  describe "POST 'api/v0/users" do
     it 'create a new user when valid params are passed' do
       user_params = {
         email: 'test@example.com',
@@ -13,7 +13,7 @@ RSpec.describe "User Registration", type: :request do
         password_confirmation: 'test'
       }
 
-      post "/api/v1/users", headers: @headers, params: JSON.generate(user: user_params)
+      post "/api/v0/users", headers: @headers, params: JSON.generate(user: user_params)
 
       expect(response).to be_successful
       expect(response.status).to eq(201)
@@ -39,7 +39,7 @@ RSpec.describe "User Registration", type: :request do
         password_confirmation: 'wrong'
       }
 
-      post "/api/v1/users", headers: @headers, params: JSON.generate(user: user_params)
+      post "/api/v0/users", headers: @headers, params: JSON.generate(user: user_params)
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
@@ -62,7 +62,7 @@ RSpec.describe "User Registration", type: :request do
         password_confirmation: 'test'
       }
 
-      post "/api/v1/users", headers: @headers, params: JSON.generate(user: user_params)
+      post "/api/v0/users", headers: @headers, params: JSON.generate(user: user_params)
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
@@ -84,7 +84,7 @@ RSpec.describe "User Registration", type: :request do
         password_confirmation: 'test'
       }
 
-      post "/api/v1/users", headers: @headers, params: JSON.generate(user: user_params)
+      post "/api/v0/users", headers: @headers, params: JSON.generate(user: user_params)
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)

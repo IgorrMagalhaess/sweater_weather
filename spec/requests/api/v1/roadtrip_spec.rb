@@ -7,14 +7,14 @@ RSpec.describe "Roadtrip Endpoints", type: :request do
     @user_api = @user.api_key
   end
 
-  describe "POST /api/v1/road_trip" do
+  describe "POST /api/v0/road_trip" do
     it 'returns the start and end city, travel time and weather at destination', :vcr do
       trip_params = {
         origin: "Cincinatti, OH",
         destination: "Chicago, IL",
         api_key: @user.api_key
       }
-      post "/api/v1/road_trip", headers: @headers, params: JSON.generate(road_trip: trip_params)
+      post "/api/v0/road_trip", headers: @headers, params: JSON.generate(road_trip: trip_params)
 
       expect(response).to be_successful
       expect(response.status).to eq(200)
@@ -62,7 +62,7 @@ RSpec.describe "Roadtrip Endpoints", type: :request do
         origin: "Cincinatti, OH",
         destination: "Chicago, IL"
       }
-      post "/api/v1/road_trip", headers: @headers, params: JSON.generate(road_trip: trip_params)
+      post "/api/v0/road_trip", headers: @headers, params: JSON.generate(road_trip: trip_params)
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
@@ -84,7 +84,7 @@ RSpec.describe "Roadtrip Endpoints", type: :request do
         destination: "Chicago, IL",
         api_key: "2a2f4f0d94c10f5dTHISWASNTSUPPOSEDTOBEHERE453dbee7f8"
       }
-      post "/api/v1/road_trip", headers: @headers, params: JSON.generate(road_trip: trip_params)
+      post "/api/v0/road_trip", headers: @headers, params: JSON.generate(road_trip: trip_params)
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
@@ -106,7 +106,7 @@ RSpec.describe "Roadtrip Endpoints", type: :request do
         destination: "Panama City, Panama",
         api_key: @user.api_key
       }
-      post "/api/v1/road_trip", headers: @headers, params: JSON.generate(road_trip: trip_params)
+      post "/api/v0/road_trip", headers: @headers, params: JSON.generate(road_trip: trip_params)
 
       expect(response).to be_successful
       expect(response.status).to eq(200)
@@ -155,7 +155,7 @@ RSpec.describe "Roadtrip Endpoints", type: :request do
         destination: "London, UK",
         api_key: @user.api_key
       }
-      post "/api/v1/road_trip", headers: @headers, params: JSON.generate(road_trip: trip_params)
+      post "/api/v0/road_trip", headers: @headers, params: JSON.generate(road_trip: trip_params)
 
       expect(response).to be_successful
       expect(response.status).to eq(200)

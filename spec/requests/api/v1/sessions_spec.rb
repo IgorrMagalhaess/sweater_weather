@@ -6,14 +6,14 @@ RSpec.describe "Sessions Endpoint", type: :request do
     @user = User.create!(email: 'user@example.com', password: 'password', password_confirmation: 'password')
   end
 
-  describe "POST api/v1/sessions" do
+  describe "POST api/v0/sessions" do
     it 'should respond with the user email and api key' do
       user_params = {
         email: 'user@example.com',
         password: 'password'
       }
 
-      post '/api/v1/sessions', headers: @headers, params: JSON.generate(user: user_params)
+      post '/api/v0/sessions', headers: @headers, params: JSON.generate(user: user_params)
 
       expect(response).to be_successful
       expect(response.status).to eq(200)
@@ -34,7 +34,7 @@ RSpec.describe "Sessions Endpoint", type: :request do
         password: 'password123'
       }
 
-      post '/api/v1/sessions', headers: @headers, params: JSON.generate(user: user_params)
+      post '/api/v0/sessions', headers: @headers, params: JSON.generate(user: user_params)
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
@@ -54,7 +54,7 @@ RSpec.describe "Sessions Endpoint", type: :request do
         password: 'password'
       }
 
-      post '/api/v1/sessions', headers: @headers, params: JSON.generate(user: user_params)
+      post '/api/v0/sessions', headers: @headers, params: JSON.generate(user: user_params)
 
       expect(response).to_not be_successful
       expect(response.status).to eq(400)

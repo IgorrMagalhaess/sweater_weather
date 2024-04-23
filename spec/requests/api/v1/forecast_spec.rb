@@ -5,9 +5,9 @@ RSpec.describe "Forecast Api", type: :request do
     @headers = { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
   end
 
-  describe "GET /api/v1/forecast?location" do
+  describe "GET /api/v0/forecast?location" do
     it "returns the current and forecast weather information for the given location", :vcr do
-      get "/api/v1/forecast?location=Atlanta,GA", headers: @headers
+      get "/api/v0/forecast?location=Atlanta,GA", headers: @headers
 
       forecast_response = JSON.parse(response.body, symbolize_names: true)
 

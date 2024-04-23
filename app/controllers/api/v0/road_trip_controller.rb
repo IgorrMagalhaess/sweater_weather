@@ -1,4 +1,4 @@
-class Api::V1::RoadTripController < ApplicationController
+class Api::V0::RoadTripController < ApplicationController
 before_action :find_user, only: [:create]
 
   def create

@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 23 Apr 2024 17:11:05 GMT
+      - Tue, 23 Apr 2024 17:15:32 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -29,7 +29,7 @@ http_interactions:
       X-Powered-By:
       - MapQuest
       X-Request-Id:
-      - 77f44720-0194-11ef-8add-93bcbc28ff6e
+      - 17330830-0195-11ef-bb21-85a4c95ca655
       Access-Control-Allow-Origin:
       - "*"
       Etag:
@@ -38,7 +38,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         eyJpbmZvIjp7InN0YXR1c2NvZGUiOjAsImNvcHlyaWdodCI6eyJ0ZXh0IjoiwqkgMjAyNCBNYXBRdWVzdCwgSW5jLiIsImltYWdlVXJsIjoiaHR0cDovL2FwaS5tcWNkbi5jb20vcmVzL21xbG9nby5naWYiLCJpbWFnZUFsdFRleHQiOiLCqSAyMDI0IE1hcFF1ZXN0LCBJbmMuIn0sIm1lc3NhZ2VzIjpbXX0sIm9wdGlvbnMiOnsibWF4UmVzdWx0cyI6LTEsImlnbm9yZUxhdExuZ0lucHV0IjpmYWxzZX0sInJlc3VsdHMiOlt7InByb3ZpZGVkTG9jYXRpb24iOnsibG9jYXRpb24iOiJBdGxhbnRhLEdBIn0sImxvY2F0aW9ucyI6W3sic3RyZWV0IjoiIiwiYWRtaW5BcmVhNiI6IiIsImFkbWluQXJlYTZUeXBlIjoiTmVpZ2hib3Job29kIiwiYWRtaW5BcmVhNSI6IkF0bGFudGEiLCJhZG1pbkFyZWE1VHlwZSI6IkNpdHkiLCJhZG1pbkFyZWE0IjoiRnVsdG9uIiwiYWRtaW5BcmVhNFR5cGUiOiJDb3VudHkiLCJhZG1pbkFyZWEzIjoiR0EiLCJhZG1pbkFyZWEzVHlwZSI6IlN0YXRlIiwiYWRtaW5BcmVhMSI6IlVTIiwiYWRtaW5BcmVhMVR5cGUiOiJDb3VudHJ5IiwicG9zdGFsQ29kZSI6IiIsImdlb2NvZGVRdWFsaXR5Q29kZSI6IkE1WEFYIiwiZ2VvY29kZVF1YWxpdHkiOiJDSVRZIiwiZHJhZ1BvaW50IjpmYWxzZSwic2lkZU9mU3RyZWV0IjoiTiIsImxpbmtJZCI6IjAiLCJ1bmtub3duSW5wdXQiOiIiLCJ0eXBlIjoicyIsImxhdExuZyI6eyJsYXQiOjMzLjc0ODMxLCJsbmciOi04NC4zOTExMX0sImRpc3BsYXlMYXRMbmciOnsibGF0IjozMy43NDgzMSwibG5nIjotODQuMzkxMTF9LCJtYXBVcmwiOiIifV19XX0=
-  recorded_at: Tue, 23 Apr 2024 17:11:05 GMT
+  recorded_at: Tue, 23 Apr 2024 17:15:32 GMT
 - request:
     method: get
     uri: http://api.weatherapi.com/v1/forecast.json?days=5&key=<Authorization>&q=33.74831,-84.39111
@@ -58,7 +58,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 23 Apr 2024 17:11:05 GMT
+      - Tue, 23 Apr 2024 17:15:32 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -68,7 +68,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Server:
-      - BunnyCDN-IL1-1070
+      - BunnyCDN-IL1-940
       Cdn-Pullzone:
       - '93447'
       Cdn-Uid:
@@ -76,7 +76,7 @@ http_interactions:
       Cdn-Requestcountrycode:
       - US
       Age:
-      - '0'
+      - '267'
       Cache-Control:
       - public, max-age=180
       Via:
@@ -84,7 +84,7 @@ http_interactions:
       X-Weatherapi-Qpm-Left:
       - '4999943'
       X-Varnish:
-      - '57357659'
+      - 53984284 57357660
       Cdn-Proxyver:
       - '1.04'
       Cdn-Requestpullsuccess:
@@ -92,13 +92,13 @@ http_interactions:
       Cdn-Requestpullcode:
       - '200'
       Cdn-Cachedat:
-      - 04/23/2024 17:11:05
+      - 04/23/2024 17:15:32
       Cdn-Edgestorageid:
       - '941'
       Cdn-Status:
       - '200'
       Cdn-Requestid:
-      - b4dccb55eef7c5774b4a157a67949cac
+      - 94b023476d7476375fb6dcd924dd0bbd
       Cdn-Cache:
       - EXPIRED
     body:
@@ -308,5 +308,5 @@ http_interactions:
         rain nearby","icon":"//cdn.weatherapi.com/weather/64x64/night/176.png","code":1063},"wind_mph":6.3,"wind_kph":10.1,"wind_degree":117,"wind_dir":"ESE","pressure_mb":1022.0,"pressure_in":30.19,"precip_mm":0.0,"precip_in":0.0,"snow_cm":0.0,"humidity":79,"cloud":38,"feelslike_c":19.7,"feelslike_f":67.4,"windchill_c":19.7,"windchill_f":67.4,"heatindex_c":19.8,"heatindex_f":67.7,"dewpoint_c":15.8,"dewpoint_f":60.4,"will_it_rain":0,"chance_of_rain":28,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":10.3,"gust_kph":16.6,"uv":1.0},{"time_epoch":1714273200,"time":"2024-04-27
         23:00","temp_c":19.2,"temp_f":66.5,"is_day":0,"condition":{"text":"Partly
         Cloudy ","icon":"//cdn.weatherapi.com/weather/64x64/night/116.png","code":1003},"wind_mph":5.8,"wind_kph":9.4,"wind_degree":118,"wind_dir":"ESE","pressure_mb":1022.0,"pressure_in":30.19,"precip_mm":0.0,"precip_in":0.0,"snow_cm":0.0,"humidity":81,"cloud":25,"feelslike_c":19.2,"feelslike_f":66.5,"windchill_c":19.2,"windchill_f":66.5,"heatindex_c":19.3,"heatindex_f":66.7,"dewpoint_c":15.7,"dewpoint_f":60.3,"will_it_rain":0,"chance_of_rain":0,"will_it_snow":0,"chance_of_snow":0,"vis_km":10.0,"vis_miles":6.0,"gust_mph":9.9,"gust_kph":15.9,"uv":1.0}]}]}}'
-  recorded_at: Tue, 23 Apr 2024 17:11:05 GMT
+  recorded_at: Tue, 23 Apr 2024 17:15:32 GMT
 recorded_with: VCR 6.2.0
